@@ -9,31 +9,16 @@
 
 DS3231 rtc;
 
-/* 
 heatTimes heatTime[7] =
 {
-	{.day = MONDAY,    .time = { 2030,  2,  3 }},
-	{.day = TUESDAY,   .time = { 4,  5,  6 }},
-	{.day = WEDNESDAY, .time = { 7,  8,  9 }},
-	{.day = THURSDAY,  .time = { 10, 11, 12 }},
-	{.day = FRIDAY,    .time = { 13, 14, 15 }},
-	{.day = SATURDAY,  .time = { 16, 17, 18 }},
-	{.day = SUNDAY,    .time = { 19, 20, 21 }},
+	{.day = MONDAY,    .time = {{ 0, 1},  {2,  3},  {4,  5},  {6,  7} }},
+	{.day = TUESDAY,   .time = {{10, 30}, {21, 31}, {22, 32}, {23, 33} }},
+	{.day = WEDNESDAY, .time = {{20, 30}, {21, 31}, {22, 32}, {23, 33} }},
+	{.day = THURSDAY,  .time = {{30, 30}, {21, 31}, {22, 32}, {23, 33} }},
+	{.day = FRIDAY,    .time = {{40, 30}, {21, 31}, {22, 32}, {23, 33} }},
+	{.day = SATURDAY,  .time = {{50, 30}, {21, 31}, {22, 32}, {23, 33} }},
+	{.day = SUNDAY,    .time = {{60, 30}, {21, 31}, {22, 32}, {23, 33} }},
 };
- */
-
-heatTimes heatTime[7] =
-{
-	{.day = MONDAY,    .time[0] = {20, 30} },
-	{.day = TUESDAY,   },
-	{.day = WEDNESDAY, },
-	{.day = THURSDAY,  },
-	{.day = FRIDAY,    },
-	{.day = SATURDAY,  },
-	{.day = SUNDAY,    },
-};
-
-//uint8_t times[] = { 2307, 2307, 2307, 2307, 2307, 2307, 2307 };
 
 void setup()
 {
